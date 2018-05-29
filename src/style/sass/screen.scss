@@ -1,0 +1,225 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "lib/reset.scss";
+@import "lib/css3-mixins.scss";
+@import "iniSet.scss";
+@import "public.scss";
+
+body{
+    background-image: url(https://cms-res.com/wp-content/uploads/2018/01/background_Litcoin.jpg)!important;
+}
+main{
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+    .container{
+        position: relative;
+        img.bg{
+            width: 100%;
+            height: 100%;
+            &.mobile{
+                display: none;
+            }
+        }
+        #sendform{
+            position: absolute;
+            right: 25px;
+            top: 110px;
+            width: 230px;
+            >*{
+                margin: 10px 0px;
+            }
+            .frombox{
+                @extend %clearfix;
+                select{
+                    float: left;
+                    width: 30%;
+                }
+                .w70{
+                    float: left;
+                    width: 70%;
+                }
+            }
+            button{
+                width: 100%;
+                color: #ffffff;
+                font-size: 18px;
+                padding: 12px;
+                margin-bottom: 10px;
+                background: #22479c;
+            }
+            input:not([type='checkbox']),select{
+                height: 40px;
+                width: 100%;
+            }
+    
+            input{
+                padding: 5px;
+            }
+            .worrin{
+                color: #444;
+                font-size: 12px;
+                div{
+                    padding: 10px 0px;
+                }
+                a{
+                    color: blue;
+                }
+                h3{
+                    margin-top: 5px;
+                }
+            }
+            .addFirend{
+                margin: 0px;
+                display: flex;
+                > * {
+                    flex: 1;
+                    text-align: center;
+                    color: beige;
+                }
+                label{
+                    display: block;
+                    padding: 3px;
+                    margin: 0px 3px;
+                    background: green;
+                    border-radius: 9px;
+                }
+            }
+        }
+        @include range-width-in(0px,767px){
+            img.bg{
+                &.mobile{
+                    display: block;
+                }
+                &.pc{
+                    display: none;
+                }
+            }
+            #sendform{
+                position: initial;
+                width: 80%;
+                margin: auto;
+                select{
+                    background: #fff;
+                }
+                .worrin{
+                    color: #fff;
+                    a{
+                        color: skyblue;
+                    }
+                }
+            }
+            
+        }
+    }
+    @include range-width-in(0px,767px){
+        padding: 0px;
+    }
+}
+
+footer{
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    div{
+        padding: 10px 0px;
+        img{
+            &:last-child{
+                float: right;
+                @include range-width-in(0px,767px){
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}

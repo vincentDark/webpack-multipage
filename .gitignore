@@ -1,0 +1,6 @@
+# 這似乎是我IDE產生的 by Amos
+node_modules/
+app/
+.DS_Store
+css/
+.sass-cache
