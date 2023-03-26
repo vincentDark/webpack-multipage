@@ -1,5 +1,6 @@
 ## 基于webpack的前端工程化开发之多页站点篇（一）
-
+* weibo: [導航站](https://yes88.art/)
+* twitter: [導航站twitter]https://twitter.com/Laikirin)
 **声明：此文只作为webpack入门学习交流，不作为实际项目参考（基于webpack1.x）。**
 
 在最初接触webpack的较长一段时间里，我（也可能很多人）都觉得webpack是专为单页应用而量身打造的，比如webpack+react、webpack+vue等，都可以近乎完美的解决各种资源的依赖加载、打包的问题。甚至css都是打包在js里去动态添加到dom文档中去。
